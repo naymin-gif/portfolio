@@ -5,6 +5,7 @@ from urllib.parse import urlsplit, unquote
 
 ROOT = Path(__file__).resolve().parent
 PUBLIC = {"index.html", "comatch.html", "resume.html", "styles.css", "resume.css", "script.js"}
+DOWNLOADS = {"output/pdf/Nay-Min-Thar-Resume.pdf"}
 
 class PortfolioHandler(SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
@@ -13,7 +14,7 @@ class PortfolioHandler(SimpleHTTPRequestHandler):
     def do_GET(self):
         path = unquote(urlsplit(self.path).path).lstrip("/") or "index.html"
         resolved = (ROOT / path).resolve()
-        if not resolved.is_relative_to(ROOT) or not (path in PUBLIC or (path.startswith("assets/") and resolved.is_file())):
+        if not resolved.is_relative_to(ROOT) or not (path in PUBLIC or path in DOWNLOADS or (path.startswith("assets/") and resolved.is_file())):
             self.send_error(404)
             return
         super().do_GET()
