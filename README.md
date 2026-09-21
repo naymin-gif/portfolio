@@ -20,9 +20,11 @@ Run `python serve.py`, then open http://127.0.0.1:4173. The preview binds only t
 - Add future project articles under the selected-work section when ready.
 - Google Fonts supplies Manrope and DM Sans, with local font fallbacks if unavailable.
 
-## Publishing
+## Live site
 
-This draft has not been published. Before publishing, review personal copy, project contributions, email, screenshots, and the résumé.
+The current portfolio is published at https://naymin-gif.github.io/portfolio/ through GitHub Pages.
+
+## Publishing updates
 
 Upload only these public files to a new portfolio repository or static host:
 
@@ -30,7 +32,7 @@ Upload only these public files to a new portfolio repository or static host:
 - `styles.css`, `resume.css`, `script.js`
 - `assets/`
 
-For GitHub Pages, enable Pages for that repository and publish from its main branch, root folder. Relative asset paths also work under a project repository URL. For Vercel, import the repository as a static/Other project with no build command and the repository root as output.
+GitHub Pages publishes the repository's `main` branch from the root folder. Pushing a new commit to `main` updates the live site automatically. Relative asset paths work under the project repository URL.
 
 Do not publish `tmp/`, which contains local reference extraction and QA files. It is excluded by `.gitignore`. No credentials are required by this website. No analytics or contact-form backend are included; the email link opens the visitor's email application.
 
