@@ -6,8 +6,7 @@ A responsive, static portfolio built with HTML, CSS, and a small amount of JavaS
 
 - `index.html`: introduction, featured CoMatch project, background, experience, contact.
 - `comatch.html`: project case study, individual contributions, team credit, screenshot gallery, expandable engineering notes.
-- `resume.html`: accessible web résumé with a direct-download link.
-- `output/pdf/Nay-Min-Thar-Resume.pdf`: fixed one-page A4 résumé without browser print headers or timestamps.
+- `resume.html`: updated, printable résumé. Use **Print / Save as PDF** for a PDF copy.
 
 ## Preview
 
@@ -32,7 +31,6 @@ Upload only these public files to a new portfolio repository or static host:
 - `index.html`, `comatch.html`, `resume.html`
 - `styles.css`, `resume.css`, `script.js`
 - `assets/`
-- `output/pdf/Nay-Min-Thar-Resume.pdf`
 
 GitHub Pages publishes the repository's `main` branch from the root folder. Pushing a new commit to `main` updates the live site automatically. Relative asset paths work under the project repository URL.
 
